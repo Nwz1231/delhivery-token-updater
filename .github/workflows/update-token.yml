@@ -2,8 +2,9 @@ name: Update Delhivery Token to Google Sheet
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # Runs daily at midnight UTC
-  workflow_dispatch:       # Allow manual trigger
+    - cron: "0 0 * * *"    # every day at 00:00 UTC
+    - cron: "0 12 * * *"   # every day at 12:00 UTC
+  workflow_dispatch:        # still allow manual runs
 
 jobs:
   update-token:
