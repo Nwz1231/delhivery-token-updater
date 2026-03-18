@@ -16,7 +16,7 @@ GSHEET_WEBAPP_URL = os.environ.get("GSHEET_WEBAPP_URL")
 ACCOUNTS = {
     "sello": {
         "username": "customercare@selloship.com",
-        "password": "Customer@1234",
+        "password": "Customer@12345",
         "tenant": 1,
         "sheet_cell": "A1"
     },
