@@ -13,21 +13,21 @@ REDIRECT_URI = "https://one.delhivery.com/v2/dashboard"
 GSHEET_WEBAPP_URL = os.environ.get("GSHEET_WEBAPP_URL")
 
 # ---------------- ACCOUNTS ----------------
+# These will be pulled from GitHub Secrets / Environment Variables
 ACCOUNTS = {
     "sello": {
-        "username": "customercare@selloship.com",
-        "password": "Customer@12345",
+        "username": os.environ.get("SELLO_USER"),
+        "password": os.environ.get("SELLO_PASS"),
         "tenant": 1,
         "sheet_cell": "A1"
     },
     "delhiveryB": {
-        "username": "cartpein@gmail.com",
-        "password": "Qazxsw@123456",
+        "username": os.environ.get("DELHIVERY_USER"),
+        "password": os.environ.get("DELHIVERY_PASS"),
         "tenant": 0,
         "sheet_cell": "A2"
     }
 }
-
 # ---------------- TOKEN GENERATOR ----------------
 def generate_token(username, password, tenant_index):
     s = requests.Session()
