@@ -23,7 +23,9 @@ jobs:
 
       - name: Run token generator
         env:
-          SELLISHIP_EMAIL: ${{ secrets.SELLISHIP_EMAIL }}
-          SELLISHIP_PASSWORD: ${{ secrets.SELLISHIP_PASSWORD }}
+          SELLO_USER: ${{ secrets.SELLO_USER }}
+          SELLO_PASS: ${{ secrets.SELLO_PASS }}
+          DELHIVERY_USER: ${{ secrets.DELHIVERY_USER }}
+          DELHIVERY_PASS: ${{ secrets.DELHIVERY_PASS }}
           GSHEET_WEBAPP_URL: ${{ secrets.GSHEET_WEBAPP_URL }}
         run: python scripts/update_token.py
